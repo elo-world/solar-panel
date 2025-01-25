@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Solar Panel</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/index.css" />
+    </head>
+    <body>
+        <div class="interface">
+            <div class="interface-left">
+                <div class="calendar">
+                    <div class="header">
+                        <button id="prevBtn">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                height="24px"
+                                viewBox="0 -960 960 960"
+                                width="24px"
+                                fill="#011822"
+                            >
+                                <path
+                                    d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"
+                                />
+                            </svg>
+                        </button>
+                        <div class="monthYear">
+                            <h2 id="monthYear"></h2>
+                        </div>
+                        <button id="nextBtn">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                height="24px"
+                                viewBox="0 -960 960 960"
+                                width="24px"
+                                fill="#011822"
+                            >
+                                <path
+                                    d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
+                                />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="days">
+                        <div class="day">Mon</div>
+                        <div class="day">Tue</div>
+                        <div class="day">Wed</div>
+                        <div class="day">Thu</div>
+                        <div class="day">Fri</div>
+                        <div class="day">Sat</div>
+                        <div class="day">Sun</div>
+                    </div>
+                    <div class="dates" id="dates"></div>
+                </div>
+            </div>
+            <div class="interface-right">
+                <p id="season"></p>
+                <h1 id="tilt"></h1>
+                <img src="images/solar-panel.png" alt="Solar panel illustration" />
+            </div>
+        </div>
+
+        <!-- JS -->
+        <script src="js/script.js"></script>
+    </body>
+</html>
