@@ -6,7 +6,7 @@ const seasonTextElement = document.getElementById("season");
 const tiltTextElement = document.getElementById("tilt");
 
 let currentDate = new Date();
-let searchDate = new Date();
+let searchDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate());
 
 const updateCalendar = () => {
     const currentYear = currentDate.getFullYear();
@@ -60,10 +60,24 @@ const updateCalendar = () => {
         datesHTML += `<div class="date inactive">${nextDate.getDate()}</div>`;
     }
 
-    let season = getSeasonTitl(seasons, searchDate);
+    let season = "";
 
-    seasonTextElement.innerHTML = season.season;
-    tiltTextElement.innerHTML = `${season.tilt}°`;
+    if (searchDate >= seasons.winter || searchDate < seasons.spring) {
+        season = "Winter";
+    } else if (searchDate >= seasons.spring && searchDate < seasons.summer) {
+        season = "Spring";
+    } else if (searchDate >= seasons.summer && searchDate < seasons.autumn) {
+        season = "Summer";
+    } else if (searchDate >= seasons.autumn && searchDate < seasons.winter) {
+        season = "Autumn";
+    }
+
+    const n = Math.round((searchDate - new Date(currentYear, 0, 1)) / (1000 * 60 ** 2 * 24));
+    const tilt = 48 - 23.45 * Math.sin((360 * (n - 81) * Math.PI) / (365 * 180));
+    console.log(currentDate, searchDate, tilt);
+
+    seasonTextElement.innerHTML = season;
+    tiltTextElement.innerHTML = `${tilt.toFixed(1)}°`;
 
     datesElement.innerHTML = datesHTML;
 
@@ -84,27 +98,6 @@ const updateCalendar = () => {
             }
         });
     }
-    console.log(searchDate);
-};
-
-const getSeasonTitl = (seasons, date) => {
-    let season = "";
-    let tilt = 0;
-
-    if (date >= seasons.winter || date < seasons.spring) {
-        season = "Winter";
-    } else if (date >= seasons.spring && date < seasons.summer) {
-        season = "Spring";
-    } else if (date >= seasons.summer && date < seasons.autumn) {
-        season = "Summer";
-    } else if (date >= seasons.autumn && date < seasons.winter) {
-        season = "Autumn";
-    }
-
-    const n = Math.round((date - new Date(date.getFullYear(), 0, 1)) / (1000 * 60 ** 2 * 24));
-    tilt = 48 - 23.45 * Math.sin((360 * (n - 81) * Math.PI) / (365 * 180));
-
-    return { season: season, tilt: tilt.toFixed(1) };
 };
 
 prevBtn.addEventListener("click", () => {
