@@ -2,3 +2,8 @@
     font-family: ClashDisplay;
     src: url("../fonts/ClashDisplay-Variable.ttf");
 }
+
+@font-face {
+    font-family: PlusJakartaSans;
+    src: url("../fonts/PlusJakartaSans.ttf");
+}

@@ -1,0 +1,89 @@
+.calendar {
+    display: inline-block;
+    padding: 32px;
+    background: #fff;
+    border-radius: 16px;
+}
+
+.calendar .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.calendar .header .selected_month {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calendar .header button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+}
+
+.calendar .days {
+    margin-bottom: 16px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar .days .day {
+    text-align: center;
+    width: 48px;
+    color: var(--text-color);
+}
+
+.calendar .dates {
+    min-height: 288px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar .dates .date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    width: 48px;
+    height: 48px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.calendar .dates .date.inactive {
+    color: #c8e8e2;
+}
+
+.calendar .dates .date:hover,
+.calendar .dates .date.active {
+    background: #d34242;
+    color: #fff;
+}
+
+.calendar .dates .date.season {
+    background: #42d372;
+    color: #fff;
+}
+
+.calendar .footer {
+    margin-top: 32px;
+}
+
+.calendar .footer #today_button {
+    padding: 8px 16px;
+    font-size: 1rem;
+    border: 1px solid var(--text-color);
+    border-radius: 8px;
+    background: none;
+    cursor: pointer;
+}
