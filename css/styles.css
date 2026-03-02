@@ -42,8 +42,8 @@ button {
     -webkit-tap-highlight-color: transparent;
 }
 
-button:focus{
-outline: none;
+button:focus {
+    outline: none;
 }
 
 section.interface {
