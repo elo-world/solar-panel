@@ -42,6 +42,10 @@ button {
     -webkit-tap-highlight-color: transparent;
 }
 
+button:focus{
+outline: none;
+}
+
 section.interface {
     display: grid;
     grid-template-columns: 1fr 2fr;
