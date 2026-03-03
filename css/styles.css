@@ -16,6 +16,7 @@ body {
     justify-content: center;
     align-items: center;
     background: var(--background-color);
+    overflow: hidden;
 }
 
 h1, h2 {
@@ -135,7 +136,7 @@ section.interface .tail .tilt-box img {
 @keyframes fade-in {
     0% {
         opacity: 0;
-        transform: translateY(15px);
+        transform: translateY(30px);
     }
     100% {
         opacity: 1;

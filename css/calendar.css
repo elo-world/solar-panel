@@ -26,6 +26,11 @@
 
 .calendar .header .selected-month button svg {
     color: var(--text-color);
+    transition: transform 500ms;
+}
+
+.calendar .header .selected-month button:hover svg {
+    transform: scale(1.3);
 }
 
 .calendar .header .selected-month #prev-month-button:hover svg {
@@ -142,30 +147,30 @@
 
 @keyframes left-arrow-hover {
     0% {
-        transform: translateX(0);
+        transform: translateX(0) scale(1.3);
     }
     49.9% {
-        transform: translateX(-50px);
+        transform: translateX(-40px) scale(1.3);
     }
     50% {
-        transform: translateX(50px);
+        transform: translateX(40px) scale(1.3);
     }
     100% {
-        transform: translateX(0);
+        transform: translateX(0) scale(1.3);
     }
 }
 
 @keyframes right-arrow-hover {
     0% {
-        transform: translateX(0);
+        transform: translateX(0) scale(1.3);
     }
     49.9% {
-        transform: translateX(40px);
+        transform: translateX(40px) scale(1.3);
     }
     50% {
-        transform: translateX(-40px);
+        transform: translateX(-40px) scale(1.3);
     }
     100% {
-        transform: translateX(0);
+        transform: translateX(0) scale(1.3);
     }
 }
