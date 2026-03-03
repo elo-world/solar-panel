@@ -2,15 +2,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const year = document.getElementById("year");
     const month = document.getElementById("month");
     const datesElement = document.getElementById("dates");
-    const today_button = document.getElementById("today_button");
-    const prev_month_button = document.getElementById("prev_month_button");
-    const next_month_button = document.getElementById("next_month_button");
+    const today_button = document.getElementById("today-button");
+    const prev_month_button = document.getElementById("prev-month-button");
+    const next_month_button = document.getElementById("next-month-button");
     const seasonTextElement = document.getElementById("season");
     const tiltTextElement = document.getElementById("tilt");
 
     let latitude = 48;
     let current_date = new Date();
     let search_date = new Date(current_date.getFullYear(), current_date.getMonth(), current_date.getDate());
+
+    const update_tilt = () => {};
 
     const updateCalendar = () => {
         const current_year = current_date.getFullYear();
