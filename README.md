@@ -11,4 +11,8 @@
 
 # 🔍 Theory
 
+<img src="./images/solar-panel_inclinaison_optimale_annee.png" alt="Inclinaison optimale au midi solaire sur l'année">
+
+<img src="./images/solar-panel_inclinaison_optimale_jour.png" alt="Inclinaison horaire optimale - jour 172">
+
 You can find the theoretical principle in the Python script: theory.py.

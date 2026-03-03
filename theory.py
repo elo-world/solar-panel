@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-latitude = 0  # 47.75  # degrés (Nord +, Sud -)
+latitude = 47.75  # degrés (Nord +, Sud -)
 day_of_year = 172  # jour à étudier (172 ≈ 21 juin)
 
 # =========================================================
