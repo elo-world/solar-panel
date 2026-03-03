@@ -119,17 +119,11 @@ section.interface .tail .tilt-box img {
     }
 }
 
-@media screen and (max-height: 700px) and (max-width: 500px) {
+@media screen and (max-height: 800px) {
     h1 {
-        font-size: 4rem;
+        font-size: 12vh;
     }
     h2 {
-        font-size: 1.3rem;
-    }
-    section.interface .tail .tilt-box {
-        width: 70%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        font-size: 3vh;
     }
 }
