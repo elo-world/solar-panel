@@ -90,6 +90,31 @@
     cursor: pointer;
 }
 
+@media screen and (max-height: 700px) {
+    .calendar {
+        padding: 16px;
+    }
+    .calendar .header .selected_month h2 {
+        font-size: 1.5rem;
+    }
+    .calendar .dates .date {
+        width: 40px;
+        height: 40px;
+        font-size: 0.8rem;
+    }
+    .calendar .header button {
+        width: 40px;
+        height: 40px;
+    }
+    .calendar .days .day {
+        width: 40px;
+        font-size: 0.8rem;
+    }
+    .calendar .footer {
+    margin-top: 16px;
+    }
+}
+
 @media screen and (max-width: 700px) {
     .calendar {
         width: 100%;
