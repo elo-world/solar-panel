@@ -12,8 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let current_date = new Date();
     let search_date = new Date(current_date.getFullYear(), current_date.getMonth(), current_date.getDate());
 
-    const update_tilt = () => {};
-
     const updateCalendar = () => {
         const current_year = current_date.getFullYear();
         const current_month = current_date.getMonth();
